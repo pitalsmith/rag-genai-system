@@ -1,20 +1,18 @@
-# RAG GenAI System: Fraud Investigation Copilot
+# RAG GenAI System
 
-A production-ready Retrieval-Augmented Generation (RAG) system designed to assist fraud analysts by providing context-aware, cited answers from internal compliance documents.
+A high-performance Retrieval-Augmented Generation (RAG) system built with **FastAPI**, **LangChain**, and **Groq**. 
 
-## Architecture
-- **Backend:** FastAPI (Python)
-- **Frontend:** Next.js (TypeScript, Vercel AI SDK)
-- **Database:** PostgreSQL + pgvector
-- **Deployment:** Docker & IaC (Terraform)
+## Tech Stack
+* **LLM**: Llama-3.3-70b via Groq API
+* **Embeddings**: Google Gemini Embedding API
+* **Vector Store**: FAISS
+* **Backend**: FastAPI
 
 ## Features
-- **Hybrid Search:** Combines vector similarity with keyword matching.
-- **Reranking:** Implements cross-encoder reranking for precision.
-- **Evaluation:** Automated testing pipeline using Ragas metrics.
+* Modular backend architecture.
+* High-speed inference using Groq LPU technology.
+* Local FAISS indexing for efficient knowledge retrieval.
 
-## Getting Started
-1. **Infrastructure:** `docker-compose up -d`
-2. **Backend:** `cd backend && pip install -r requirements.txt && uvicorn app.main:app --reload`
-3. **Frontend:** `cd frontend && npm install && npm run dev`
-# rag-genai-system
+## Setup
+1. Clone the repo: `git clone <your-repo-url>`
+2. Create your `.env` file:
