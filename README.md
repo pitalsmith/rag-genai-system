@@ -15,13 +15,13 @@ In a data-heavy environment, standard LLMs often struggle with private or specif
 
 ### 🛠 Tech Stack
 
-* **Frontend:** [Streamlit](https://streamlit.io/) – For rapid, interactive data-driven UI.
-* **Backend:** [FastAPI](https://fastapi.tiangolo.com/) – For high-performance, asynchronous API operations.
-* **LLM (Generation):** [Groq API](https://groq.com/) (using Llama 3) for lightning-fast inference.
-* **Embeddings:** [Google Gemini](https://ai.google.dev/) (`text-embedding-004`) for high-quality semantic understanding.
-* **Orchestration:** [LangChain](https://www.langchain.com/) for building the retrieval pipeline.
-* **Vector Database:** [FAISS](https://github.com/facebookresearch/faiss) – For efficient local similarity search.
-* **Deployment:** [Render](https://render.com/) – Automated cloud hosting with CI/CD.
+* **Frontend:**Streamlit – For rapid, interactive data-driven UI.
+* **Backend:** FastAPI – For high-performance, asynchronous API operations.
+* **LLM (Generation):** Groq API (using Llama 3) for lightning-fast inference.
+* **Embeddings:** Google Gemini (`text-embedding-004`) for high-quality semantic understanding.
+* **Orchestration:** LangChain for building the retrieval pipeline.
+* **Vector Database:** FAISS – For efficient local similarity search.
+* **Deployment:** Render – Automated cloud hosting with CI/CD.
 
 ### ⚙️ How It Works
 
