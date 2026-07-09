@@ -8,4 +8,5 @@ langchain-classic
 faiss-cpu
 pydantic
 python-multipart
+pypdf
 # ... any other libraries you import in main.py
