@@ -34,9 +34,11 @@ In a data-heavy environment, standard LLMs often struggle with private or specif
 
 1. Chat Interface & Knowledge Base Management
 A sleek, intuitive chat interface where the AI answers questions grounded in your uploaded documents. The sidebar provides full control over your knowledge base, allowing you to index new files and delete old ones with ease.
+![AI Assistant Overview](https://github.com/pitalsmith/rag-genai-system/blob/b9be3422c14ef6ed02dec6bd7a2d88396c6c78f7/docs/assets/S1.JPG)
 
-2. Document Upload & File Management
+3. Document Upload & File Management
 Easily upload new PDFs, TXT, or DOCX files. The scrollable knowledge base in the sidebar keeps your workspace organized, ensuring your documents are always indexed and ready for retrieval.
+![AI Assistant Overview](https://github.com/pitalsmith/rag-genai-system/blob/b9be3422c14ef6ed02dec6bd7a2d88396c6c78f7/docs/assets/S2.JPG)
 
 ### How to Run Locally
 
