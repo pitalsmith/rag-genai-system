@@ -19,7 +19,7 @@ app = FastAPI()
 # Replace the URL with your final Render frontend URL once deployed
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], 
+    allow_origins=["https://rag-genai-system-1.onrender.com"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
