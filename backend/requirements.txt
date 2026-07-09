@@ -7,4 +7,5 @@ langchain-google-genai
 langchain-classic
 faiss-cpu
 pydantic
+python-multipart
 # ... any other libraries you import in main.py
