@@ -30,6 +30,14 @@ In a data-heavy environment, standard LLMs often struggle with private or specif
 3. **Storage:** Embeddings are saved into a **FAISS** vector index for lightning-fast similarity lookups.
 4. **Retrieval & Generation:** When a user asks a question, the system finds the most relevant document segments and sends them to **Groq/Llama 3**, which crafts a precise answer based solely on that context.
 
+📸 Screenshots
+
+1. Chat Interface & Knowledge Base Management
+A sleek, intuitive chat interface where the AI answers questions grounded in your uploaded documents. The sidebar provides full control over your knowledge base, allowing you to index new files and delete old ones with ease.
+
+2. Document Upload & File Management
+Easily upload new PDFs, TXT, or DOCX files. The scrollable knowledge base in the sidebar keeps your workspace organized, ensuring your documents are always indexed and ready for retrieval.
+
 ### How to Run Locally
 
 #### 1. Clone the Repository
