@@ -60,22 +60,20 @@ with col1:
                 st.error(f"Connection Error: {e}")
     
     st.subheader("Knowledge Base")
-
-df = get_file_list()
-
-if not df.empty:
-    # --- TEMPORARILY REMOVE THE CUSTOM DIVS TO TEST ---
-    for index, row in df.iterrows():
-        col1, col2 = st.columns([0.8, 0.2])
-        col1.write(f"📄 {row['FILE NAME']}")
-        
-        # Test if the button works without the CSS container
-        if col2.button("🗑️", key=f"del_{index}"):
-            response = requests.delete(f"{API_URL}/delete-file/{row['FILE NAME']}")
-            if response.status_code == 200:
-                st.rerun()
-else:
-    st.info("No files indexed yet.")
+    df = get_file_list()
+    if not df.empty:
+        # --- TEMPORARILY REMOVE THE CUSTOM DIVS TO TEST ---
+        for index, row in df.iterrows():
+            col1, col2 = st.columns([0.8, 0.2])
+            col1.write(f"📄 {row['FILE NAME']}")
+            
+            # Test if the button works without the CSS container
+            if col2.button("🗑️", key=f"del_{index}"):
+                response = requests.delete(f"{API_URL}/delete-file/{row['FILE NAME']}")
+                if response.status_code == 200:
+                    st.rerun()
+    else:
+        st.info("No files indexed yet.")
 
 with col2:
     st.header("AI Assistant")
