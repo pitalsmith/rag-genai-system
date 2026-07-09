@@ -63,25 +63,35 @@ st.subheader("Knowledge Base")
 df = get_file_list()
 
 if not df.empty:
-    # Use a container to hold the list
+    # Use a custom div to force a scrollable area if the content is too wide
+    st.markdown("""
+    <style>
+        .scrollable-kb {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
     with st.container():
+        st.markdown('<div class="scrollable-kb">', unsafe_allow_html=True)
         for index, row in df.iterrows():
-            # Use three columns: Name, Date/Size, and Delete Button
-            c1, c2, c3 = st.columns([0.6, 0.3, 0.1])
+            # Align items tightly to the left
+            col1, col2 = st.columns([0.8, 0.2])
             
-            c1.write(f"📄 **{row['FILE NAME']}**")
-            c2.caption(f"{row['SIZE']} • {row['ADDED']}")
+            with col1:
+                st.write(f"📄 {row['FILE NAME']} ({row['SIZE']})")
             
-            if c3.button("🗑️", key=f"del_{row['FILE NAME']}"):
-                try:
+            with col2:
+                if st.button("🗑️", key=f"del_{row['FILE NAME']}"):
                     response = requests.delete(f"{API_URL}/delete-file/{row['FILE NAME']}")
                     if response.status_code == 200:
                         st.toast(f"Deleted {row['FILE NAME']}")
-                        st.rerun() 
-                    else:
-                        st.error("Delete failed.")
-                except Exception as e:
-                    st.error(f"Error: {e}")
+                        st.rerun()
+        st.markdown('</div>', unsafe_allow_html=True)
 else:
     st.info("No files indexed yet.")
 
