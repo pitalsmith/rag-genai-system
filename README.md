@@ -14,6 +14,8 @@
 * **Vector Database:** FAISS – For efficient local similarity search.
 * **Deployment:** Render – Automated cloud hosting with CI/CD.
 
+## Live Preview
+
 ![App Gif](https://github.com/pitalsmith/rag-genai-system/blob/54f16b60ca2e4536af3e9bcc7f024175a8beee93/docs/assets/Ai%20Assistant.gif)
 
 ### [Visit the Live RAG AI App here](https://rag-genai-system-1.onrender.com)
